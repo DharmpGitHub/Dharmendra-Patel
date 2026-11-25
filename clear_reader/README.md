@@ -10,8 +10,8 @@ original page.
 
 ## Install on your phone
 
-1. Copy `../apk/ClearReader-0.1.0-arm64.apk` to the phone. Use the `armv7`
-   file only for phones older than about 2017.
+1. Copy `../apk/ClearReader-0.1.1-universal.apk` to the phone. It works on
+   every phone CPU type (64-bit, 32-bit, x86) and needs Android 7.0 or newer.
 2. Open it and allow "Install unknown apps" for your file manager when Android asks.
 3. Open **Clear Reader**, tap **Scan**, and allow **All files access** so it
    can list every PDF on the phone.
@@ -36,7 +36,7 @@ original page.
 - **Maths and tables** come out as plain text in large-text mode. Use the strip or the original page for those.
 - **Old Hindi fonts** (Kruti Dev and similar) extract as wrong characters. Unicode Hindi works.
 - A highlight in large-text mode stays within one paragraph. In original mode it can span pages.
-- The APK is signed with a development key. That's fine for personal use; Google Play needs a release key.
+- The APK is signed with a release key kept in `android/keystore/`, which is not in git. Keep a backup: future updates must be signed with the same key, or Android refuses to update the installed app.
 
 ## Build from source
 
